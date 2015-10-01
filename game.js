@@ -25,6 +25,10 @@ var game = new Phaser.Game(600, 600, Phaser.AUTO, gameCanvas,{ preload: preload,
 	 * All of the assets (images, sounds, etc.), should be loaded here.
 	 */                        
 function preload() {
+    game.load.image('sky', 'assets/sky.png');
+    game.load.image('ground', 'assets/platform.png');
+    game.load.image('star', 'assets/star.png');
+    game.load.spritesheet('dude', 'assets/dude.png', 32, 48)
     // load all game assets here
 
 } 
@@ -35,7 +39,7 @@ function preload() {
 	 * It is called when the game is first created. The initial game 
 	 * should be rendered out here.
 	 */
-function create() {
+function create() { game.add.sprite(0,0,'star')
   // create the game world here
     
 }
