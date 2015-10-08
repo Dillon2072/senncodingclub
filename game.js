@@ -41,7 +41,7 @@ function preload() {
 	 */
     var platforms; 
 function create() { 
-    game.add.sprite(0,0,'star')
+    game.add.sprite(0,0,'star');
 game.physics.startSystem(Phaser.Physics.Arcade);
     game.add.sprite(0,0, 'sky');
     platforms = game.add.group();
