@@ -39,8 +39,20 @@ function preload() {
 	 * It is called when the game is first created. The initial game 
 	 * should be rendered out here.
 	 */
-function create() { game.add.sprite(0,0,'star')
-  // create the game world here
+    var platforms; 
+function create() { 
+    game.add.sprite(0,0,'star')
+game.physics.startSystem(Phaser.Physics.Arcade);
+    game.add.sprite(0,0, 'sky');
+    platforms = game.add.group();
+    platforms.enableBody=true; 
+    var ground = platforms.create(0, game.world.height - 64, 'ground');
+    ground.scale.setTo(2,2); 
+    ground.body.immovable = true; 
+    var ledge = platforms.create(400, 400, 'ground'); 
+    ledge = platforms.create(-150, 250, 'ground');
+    ledge.body.immovable = true; 
+    // create the game world here
     
 }
   
